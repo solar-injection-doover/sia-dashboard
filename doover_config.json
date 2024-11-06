@@ -1,0 +1,65 @@
+{
+    "deployment_package_dir": "",
+    "file_deployments": {
+        "files": [
+            {
+                "name": "sia_dashboard",
+                "file_dir": "assets/SiaDashboardRemote.js",
+                "mime_type": "text/javascript"
+            }
+        ]
+    },
+    "processor_deployments" : {
+        "processors" : [
+            {
+                "name" : "sia_dashboard_processor",
+                "processor_package_dir" : "processor/"
+            }
+        ],
+        "tasks" : [
+            {
+                "name" : "on_deploy",
+                "processor_name" : "sia_dashboard_processor",
+                "task_config" : {
+                    "message_type": "DEPLOY"
+                },
+                "subscriptions" : [
+                    {
+                        "channel_name" : "deployments",
+                        "is_active" : true
+                    }
+                ]
+            }
+        ]
+    },
+    "deployment_channel_messages": [
+        {
+            "channel_name": "ui_cmds",
+            "channel_message": {}
+        },
+        {
+            "channel_name": "deployments",
+            "channel_message": {}
+        },
+        {
+            "channel_name": "ui_state",
+            "channel_message": {
+                "state": {
+                    "children": {
+                        "SiaDashboard": {
+                            "type": "uiRemoteComponent",
+                            "name": "SiaDashboardRemote",
+                            "componentUrl": "sia_dashboard",
+                            "children": {}
+                        },
+                        "node_connection_info": {
+                            "type": "uiConnectionInfo",
+                            "name": "node_connection_info",
+                            "connectionType": "continuous"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
