@@ -1,0 +1,55 @@
+/* Sample CSS (TitleBar.css) */
+
+.title-bar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.5);
+}
+
+.flashing {
+  border: 2px solid transparent;
+  border-radius: 100%;
+  animation: flash-border 1s infinite alternate;
+}
+
+.title-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,0.5);
+  }
+  
+  .pulsing-icon {
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .flashing {
+    color: orange;
+    animation: flash-icon 1s infinite alternate;
+  }
+  
+  .collapsible-section {
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  .collapsible-section.hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes flash-border {
+    0% { background-color: orange; border-color: orange;  }
+    50% { background-color: transparent; border-color: transparent;  }
+  }

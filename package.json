@@ -1,0 +1,53 @@
+{
+  "name": "sia-remote",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack --config webpack.config.js && serve -s ./assets -l 8001",
+    "watch": "webpack --config webpack.config.js --watch --mode development"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "external-remotes-plugin": "^1.0.0",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "serve": "^14.2.4",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@ngrok/ngrok": "^0.5.2",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
