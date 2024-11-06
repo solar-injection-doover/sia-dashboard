@@ -3,7 +3,7 @@
     "file_deployments": {
         "files": [
             {
-                "name": "sia_dashboard",
+                "name": "sia_dashboard_remotes",
                 "file_dir": "assets/SiaDashboardRemote.js",
                 "mime_type": "text/javascript"
             }
@@ -49,7 +49,7 @@
                         "SiaDashboard": {
                             "type": "uiRemoteComponent",
                             "name": "SiaDashboardRemote",
-                            "componentUrl": "sia_dashboard",
+                            "componentUrl": "sia_dashboard_remote",
                             "children": {}
                         },
                         "node_connection_info": {
