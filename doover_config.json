@@ -3,7 +3,7 @@
     "file_deployments": {
         "files": [
             {
-                "name": "sia_dashboard_remotes",
+                "name": "sia_dashboard_remote",
                 "file_dir": "assets/SiaDashboardRemote.js",
                 "mime_type": "text/javascript"
             }
